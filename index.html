@@ -140,6 +140,54 @@
     </div>
   </div>
 
+  <section class="plan">
+    <h2>📢 AI Ad Maker</h2>
+    <p>Create professional ads for your business</p>
+
+    <input id="business" type="text"
+      placeholder="Enter Business Name"
+      style="width:100%;padding:12px;margin:10px 0;border-radius:8px;">
+
+    <input id="service" type="text"
+      placeholder="Enter Product or Service"
+      style="width:100%;padding:12px;margin:10px 0;border-radius:8px;">
+
+    <input id="audience" type="text"
+      placeholder="Enter Target Audience"
+      style="width:100%;padding:12px;margin:10px 0;border-radius:8px;">
+
+    <select id="platform"
+      style="width:100%;padding:12px;margin:10px 0;border-radius:8px;">
+      <option>Instagram</option>
+      <option>Facebook</option>
+      <option>LinkedIn</option>
+    </select>
+
+    <button onclick="prepareAd()"
+      style="width:100%;padding:14px;background:#687cff;color:white;border:0;border-radius:8px;">
+      Generate Ad
+    </button>
+
+    <p id="result" style="margin-top:15px;"></p>
+  </section>
+
+  <script>
+    function prepareAd() {
+      const business = document.getElementById("business").value;
+      const service = document.getElementById("service").value;
+      const audience = document.getElementById("audience").value;
+      const platform = document.getElementById("platform").value;
+
+      if (!business || !service || !audience) {
+        alert("Please fill all fields!");
+        return;
+      }
+
+      document.getElementById("result").innerText =
+        "Your ad request is ready. AI connection will be added next!";
+    }
+  </script>
+
   <footer>
     © 2026 TS AI Studio 2.0
   </footer>
